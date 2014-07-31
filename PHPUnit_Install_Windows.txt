@@ -1,0 +1,22 @@
+Install PEAR, a dependency for PHPUnit:
+
+   1. Visit http://pear.php.net/go-pear.phar in your browser and save the file into your PHP directory.
+      This is the folder where you can find php.exe.
+   2. Open an administrator command prompt. 
+      On Vista or Windows 7, hit your Windows key, type “cmd”, right-click the resulting “cmd.exe” search result, and select “Run as administrator”.
+      Navigate to the folder where you have PHP installed, the same folder where you saved the file in the previous step.
+   3. Type the following command to execute the file you just downloaded: php go-pear.phar
+   4. After a moment, you should start being prompted for input. 
+      The installer is pretty self-explanatory and I think you want a system installation rather than a local one.
+   5. Open the folder where PHP is installed (WAMP -- C:\wamp\bin\php\phpX.x\) and double-click the PEAR_ENV.reg file that has been created.
+      This allows you to run the pear command from any folder.
+   6. Verify PEAR is working by running the command pear version
+
+Install PHPUnit:
+
+   1. Turn on auto_discover in PEAR by typing the following command at the command line: pear config-set auto_discover 1
+   2. Download and install PHPUnit by running the following command: pear install pear.phpunit.de/PHPUnit
+   3. In order to be able to run the phpunit command from any folder, you need to add it to your Windows Path value.
+      Right-click My Computer → Properties → Advanced system settings → Environmental Variables → select “Path” under “System Variables” → Edit → Add a semi-colon (;) and then the full path to your PHP folder onto the end of the value, for example like this: ;D:\Webserver\php
+   4. Verify PHPUnit is working by running the command phpunit --version 
+
